@@ -1,0 +1,7 @@
+# sublime 配置perl 自动执行
+
+{
+	"cmd": ["perl", "-w", "$file"],
+	"file_regex": ".* at (.*) line ([0-9]*)",
+	"selector": "source.perl"
+}
