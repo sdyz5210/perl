@@ -17,7 +17,7 @@ $age = 25;
 $str = "Hello Perl";
 $salary = 145.23;
 
-#scalar 标量
+#scalar 标量变量
 
 print "Age = $age\n";
 print "str = $str\n";
