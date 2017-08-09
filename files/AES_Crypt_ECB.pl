@@ -28,10 +28,9 @@ sub testEcb{
 sub testFileEncryptEcb{
 	my $sourceFile = "/Users/mac/Documents/data/bactive/MiLib114_S3_L001_R1_001.fastq.gz";
 	my $destFile = "/Users/mac/Documents/data/bactive/003.fastq.gz.aes" ;
-	my $encoding = ":raw:perlio:bytes";
-	open(DATA1,"<$encoding",$sourceFile) or die "文件无法打开, $!";
+	open(DATA1,"<$sourceFile") or die "文件无法打开, $!";
 	binmode(DATA1);
-	open(DATA2,">$encoding",$destFile) or die "文件无法打开, $!";
+	open(DATA2,">$destFile") or die "文件无法打开, $!";
 	binmode(DATA2);
 
 	my $key = "1234567890abcdef";
@@ -57,10 +56,9 @@ sub testFileEncryptEcb{
 sub testFileDecryptEcb{
 	my $sourceFile = "/Users/mac/Documents/data/bactive/003.fastq.gz.aes";
 	my $destFile = "/Users/mac/Documents/data/bactive/003.fastq.gz" ;
-	my $encoding = ":raw:perlio:bytes";
-	open(DATA1,"<$encoding",$sourceFile) or die "文件无法打开, $!";
+	open(DATA1,"<$sourceFile") or die "文件无法打开, $!";
 	binmode(DATA1);
-	open(DATA2,">$encoding",$destFile) or die "文件无法打开, $!";
+	open(DATA2,">$destFile") or die "文件无法打开, $!";
 	binmode(DATA2);
 
 	my $key = "1234567890abcdef";
