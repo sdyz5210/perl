@@ -47,6 +47,7 @@ sub encryptFile{
 			-cipher => $algorithm,
 			-iv => $iv,
 			-header => "none",
+			-padding => "standard"
 		);
 	$cipher->start('encrypting');
 	my $buffer = undef;
@@ -75,6 +76,7 @@ sub decryptFile{
 			-cipher => $algorithm,
 			-iv => $iv,
 			-header => "none",
+			-padding => "standard"
 		);
 	$cipher->start('decrypting');
 	my $buffer = undef;
@@ -88,5 +90,5 @@ sub decryptFile{
 }
 
 #encryptString();
-#encryptFile();
-decryptFile();
+encryptFile();
+#decryptFile();
