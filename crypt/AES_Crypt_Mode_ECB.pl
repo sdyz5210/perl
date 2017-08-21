@@ -62,9 +62,9 @@ sub decryptFile{
 	close(DATA2);
 }
 
-#encryptString();
-encryptFile();
-decryptFile();
+encryptString();
+#encryptFile();
+#decryptFile();
 
 
 =java
